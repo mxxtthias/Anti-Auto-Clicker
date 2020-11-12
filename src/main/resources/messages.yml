@@ -1,0 +1,53 @@
+Player-Not-Online:
+  - '&cThis player is not online!'
+#
+Player-Now-Offline:
+  - '&c%player% is now offline!'
+  - '&cCan no longer be checked!'
+#
+Activate-Notify:
+  - '&cYou now get notifications!'
+#
+Notify-Already-Activated:
+  - '&cNotifications are already activated!'
+#
+Deactivate-Notify:
+  - '&cYou now get no notifications anymore!'
+#
+Notify-Already-Deactivated:
+  - '&cNotifications are already deactivated!'
+#
+Team-Notify:
+  - '§cAutoClicker was discovered at &4%player% &8[&b%clicks%&8] &8[&6%average%&8] &8[&6VL: &e%VL%&8]'
+  - '&cUse &6/antiac check %player% &cto check the player'
+#
+On-Click-Check:
+  - '&cYou will now receive the clicks and average from &4%player%'
+  - '&cTo toggle do &6/antiac check off'
+#
+On-Click-Check-Off:
+  - '&cYou are now not checking anyone anymore!'
+#
+Not-Checking-Anyone:
+  - '&cYou are currently not checking anyone!'
+#
+Kick-Reason:
+  - '&cYou have been kicked by the AutoClicker detection!'
+#
+Ban-Reason:
+  - '&cYou have been banned by the AutoClicker detection!'
+  - '&cYour ban will expire on'
+  - '&4%date%'
+#
+Punished:
+  - '&cYou have been punished by the AutoClicker detection'
+#
+ShoutOut-Punishment:
+  - '&4%player% &chave been punished by the AutoClicker detection'
+#
+
+
+
+
+
+

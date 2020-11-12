@@ -1,0 +1,8 @@
+name: AntiAC
+author: Luziferium
+version: ${project.version}
+main: de.luzifer.core.Core
+
+commands:
+  antiac:
+    description: help overview

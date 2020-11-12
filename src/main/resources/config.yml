@@ -1,0 +1,129 @@
+# The plugin does not perceive clicks on the ground or in the air so well. But clicks against players or entities are generally 100% accurate
+AntiAC:
+
+# Normal configurations
+  AllowedClicks: 40
+  # The number of clicks that are allowed
+  # Could come to false positives if it is under 15-25
+
+  React-At-Violations: 5
+  # Will punish the player & inform the team, if the player have this much VL's
+
+  ClickAverageOfSeconds: 3
+  # Summarizes the clicks from the last ClickAverageOfSeconds seconds
+
+  AverageCheck: true
+  # The average clicks are checked if they are constant if the player is above the allowed clicks
+
+  AverageCheckAtEntries: 3
+  # AverageCheck will fire if the AverageChecker contains AverageCheckAtEntries entries
+
+  AverageCheckNeededClicks: 15
+  # AverageCheck will fire if the player have more clicks than AverageCheckNeededClicks
+  # Could come to false positives if it is under 15
+
+  AverageCheckHowOften: 5
+  # Summarizes the averages from the last ClickAverageOfSeconds seconds
+
+  NeededPermission: 'antiac.clicks'
+  # Permissions which are needed to execute the commands
+  # OP also works
+
+  AutoNotification: true
+  # Enables notifications for players with permissions after a reload or when they log in
+
+  ConsoleNotification: true
+  # Sends a notification to the server console when a player comes over the allowed CPS
+
+  TPSChecker: true
+  # Checks the tps to prevent false detections because of lags
+  # Stops the counting of the clicks while the low tps
+  # EVERY LAG PIECE COUNTS
+
+  LowestAllowedTPS: 15
+  # Set the lowest allowed TPS.
+  # If the TPS is lower than LowestAllowedTPS the TPSProtection will be activated
+
+  PingChecker: true
+  # Checks the ping of every player to prevent false detections because of ping
+  # Stops the counting of the clicks while the player has a high ping
+
+  HighestAllowedPing: 200
+  # Set the highest allowed Ping
+  # If the Ping is higher than HighestAllowedPing the PingProtection will be activated
+
+  UpdateChecker: true
+  # Check the plugin for updates and shout out a message if there is any
+
+  Bypass: true
+  # If 'true' the clicks of the players with the perms BypassPermission will not be count
+
+  BypassPermission: 'antiac.bypass'
+  # Permission for being bypassed
+  # OP also works
+
+  Log: false
+  # Store players who come over the allowed clicks with their highest click count in a file.
+  # ATTENTION only recommended if sufficient memory space is available.
+
+  DeleteLogsAfterDays: 14
+  # Deletes the logs after DeleteLogsAfter days
+
+
+# Punishments configurations
+  InformTeam: true
+  # Sends a message to someone with the permissions If a player got discovered for AutoClicker
+
+  RestrictPlayer: true
+  # If a player got discovered for AutoClicker he can't build & place blocks and can't hit entities
+  # Will just restrict the player when his clicks are too high or the average is too equal
+
+  PlayerFreeze: false
+  # If a player got discovered for AutoClicker he gets frozen
+  # PlayerFreeze overwrites RestrictPlayer
+
+  FreezeTimeInSeconds: 10
+  # Player is frozen FreezeTimeInSeconds seconds
+  # PlayerFreeze must be true
+
+  FreezeAtClicks: 50
+  # Freeze the player when he has reached this number of clicks. PlayerFreeze must be true
+
+  PlayerKill: true
+  # If a player got discovered for AutoClicker he gets killed
+  # PlayerKill overwrites PlayerFreeze, RestrictPlayer
+
+  KillAtClicks: 55
+  # Kill the player when he reached this number of clicks. PlayerKill must be true
+
+  PlayerKick: false
+  # If a player got discovered for AutoClicker he gets kicked
+  # PlayerKick overwrites PlayerKill, PlayerFreeze, RestrictPlayer
+
+  ExecuteKickCommand: ''
+  # At ExecuteCommand you can insert your kick command to kick players. If it stay clear, it'll be the plugin kick.
+  # For example: 'kick %player% 14'
+  # The Console must be able to execute the command!
+
+  KickAtClicks: 60
+  # Kick the player when he has reached this number of clicks. PlayerKick must be true
+
+  PlayerBan: false
+  # If a player got discovered for AutoClicker he gets banned
+  # ATTENTION -> bans the player from the server where he got detected // NOT BUNGEE //
+  # PlayerBan overwrites PlayerKick, PlayerKill, PlayerFreeze, RestrictPlayer
+
+  ExecuteBanCommand: ''
+  # At ExecuteCommand you can insert your ban command to ban players. If it stay clear, it'll be the plugin ban.
+  # For example : 'ban %player% 14'
+  # The Console must be able to execute the command!
+
+  BanAtClicks: 70
+  # Ban the player when he has reached this number of clicks. PlayerBan must be true
+
+  UnbanAfterHours: 1
+  # Unban the player after UnbanAfterHours hours
+
+  ShoutOutPunishment: true
+  # If a player got discovered for AutoClicker he gets visually struck by a lightning and a message is sent to the chat.
+  # Only works when PlayerKick, PlayerBan, PlayerFreeze, PlayerKill or RestrictPlayer is enabled.
