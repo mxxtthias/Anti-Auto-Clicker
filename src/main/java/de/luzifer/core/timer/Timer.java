@@ -47,34 +47,34 @@ public class Timer implements Runnable {
     private void sendActionBar(User user) {
         if(user.getChecked() != null) {
 
-            String message1 = "§4§l" + user.getChecked().getName();
+            String message1 = "§f[§6A§f] §b§l" + user.getChecked().getName();
             String message2;
 
             if(Variables.allowedClicks - user.getChecked().getClicks() <= 8) {
                 if(!(Variables.allowedClicks - user.getChecked().getClicks() <= 0)) {
-                    message2 = " §e§l-> §cClicks : §c§l" + user.getChecked().getClicks() + " §6Average : §6§l" + user.getChecked().getAverage();
+                    message2 = " §6§l- §7CPS: §c§l" + user.getChecked().getClicks() + " §bAverage: §b§l" + user.getChecked().getAverage();
                 } else {
-                    message2 = " §e§l-> §cClicks : §4§l" + user.getChecked().getClicks()+ " §6Average : §6§l" + user.getChecked().getAverage();
+                    message2 = " §6§l- §7CPS: §4§l" + user.getChecked().getClicks()+ " §bAverage: §b§l" + user.getChecked().getAverage();
                 }
             } else {
-                message2 = " §e§l-> §cClicks : §a§l" + user.getChecked().getClicks()+ " §6Average : §6§l" + user.getChecked().getAverage();
+                message2 = " §6§l- §7CPS: §b§l" + user.getChecked().getClicks()+ " §bAverage: §b§l" + user.getChecked().getAverage();
             }
 
-            message2 = message2 + " §6VL: §e" + user.getChecked().getViolations();
+            message2 = message2 + " §7VL: §b" + user.getChecked().getViolations();
 
             if(Core.lowTPS) {
-                message2 = " §e§l-> §c§lCannot be checked -> §4§lLowTPS";
+                message2 = " §6§l- §e⚠ §c§lCannot be checked. Low TPS §e⚠";
             }
 
             if(Variables.pingChecker) {
                 if(user.getChecked().getPing() >= Variables.highestAllowedPing) {
-                    message2 = " §e§l-> §c§lCannot be checked -> §4§lPing §8(§4" + user.getChecked().getPing() + "§8)";
+                    message2 = " §6§l- §e⚠ §c§lCannot be checked. Ping (" + user.getChecked().getPing() + "ms) §e⚠";
                 }
             }
 
             if(Variables.bypass) {
                 if(user.getChecked().isBypassed()) {
-                    message2 = " §e§l-> §c§lCannot be checked -> §4§lBypassed";
+                    message2 = " §6§l- §e⚠ §c§lCannot be checked. Bypassed §e⚠";
                 }
             }
 
