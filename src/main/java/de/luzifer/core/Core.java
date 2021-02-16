@@ -172,7 +172,7 @@ public class Core extends JavaPlugin {
     }
 
     public void initialize() {
-        prefix = "§cAnti§4AC §8» ";
+        prefix = "§f[§6A§f] ";
         new Metrics(this, 6473);
         try {
             Bukkit.getLogger().info("[AntiAC] Initialize complete");
