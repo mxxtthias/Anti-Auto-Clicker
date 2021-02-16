@@ -52,29 +52,29 @@ public class Timer implements Runnable {
 
             if(Variables.allowedClicks - user.getChecked().getClicks() <= 8) {
                 if(!(Variables.allowedClicks - user.getChecked().getClicks() <= 0)) {
-                    message2 = " §6§l- §7CPS: §c§l" + user.getChecked().getClicks() + " §bAverage: §b§l" + user.getChecked().getAverage();
+                    message2 = "§b§l: §7[CPS: §c§l" + user.getChecked().getClicks() + "§7] §7[Average: §b§l" + user.getChecked().getAverage() + "§7]";
                 } else {
-                    message2 = " §6§l- §7CPS: §4§l" + user.getChecked().getClicks()+ " §bAverage: §b§l" + user.getChecked().getAverage();
+                    message2 = "§b§l: §7[CPS: §4§l" + user.getChecked().getClicks()+ "§7] §7[Average: §b§l" + user.getChecked().getAverage() + "§7]";
                 }
             } else {
-                message2 = " §6§l- §7CPS: §b§l" + user.getChecked().getClicks()+ " §bAverage: §b§l" + user.getChecked().getAverage();
+                message2 = "§b§l: §7[CPS: §b§l" + user.getChecked().getClicks()+ "§7] §7[Average: §b§l" + user.getChecked().getAverage() + "§7]";
             }
 
-            message2 = message2 + " §7VL: §b" + user.getChecked().getViolations();
+            message2 = message2 + " §7[VL: §b" + user.getChecked().getViolations();
 
             if(Core.lowTPS) {
-                message2 = " §6§l- §e⚠ §c§lCannot be checked. Low TPS §e⚠";
+                message2 = "§b§l: §e⚠ §c§lCannot be checked. Low TPS §e⚠";
             }
 
             if(Variables.pingChecker) {
                 if(user.getChecked().getPing() >= Variables.highestAllowedPing) {
-                    message2 = " §6§l- §e⚠ §c§lCannot be checked. Ping (" + user.getChecked().getPing() + "ms) §e⚠";
+                    message2 = "§b§l: §e⚠ §c§lCannot be checked. Ping (" + user.getChecked().getPing() + "ms) §e⚠";
                 }
             }
 
             if(Variables.bypass) {
                 if(user.getChecked().isBypassed()) {
-                    message2 = " §6§l- §e⚠ §c§lCannot be checked. Bypassed §e⚠";
+                    message2 = "§b§l: §e⚠ §c§lCannot be checked. Bypassed §e⚠";
                 }
             }
 
