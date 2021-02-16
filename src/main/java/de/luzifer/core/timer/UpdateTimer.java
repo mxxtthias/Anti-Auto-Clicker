@@ -21,10 +21,8 @@ public class UpdateTimer implements Runnable{
                     if(!player.hasPermission(Variables.perms) && !player.isOp()) {
 
                     } else {
-                        player.sendMessage(" ");
                         player.sendMessage(Core.prefix + "§aAn update is available!");
                         player.sendMessage(Core.prefix + "§c" + Core.getInstance().getDescription().getVersion() + " §e-> §a" + version);
-                        player.sendMessage(" ");
                     }
                 }
             }
