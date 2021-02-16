@@ -186,9 +186,7 @@ public class Listeners implements Listener {
 
                     user.setNotified(true);
 
-                    p.sendMessage(" ");
                     Variables.NOTIFY_ACTIVATED.forEach(var -> p.sendMessage(Core.prefix + var.replace("&", "§")));
-                    p.sendMessage(" ");
                 }
             }, 15);
         }
@@ -201,9 +199,7 @@ public class Listeners implements Listener {
         for(Player all : Bukkit.getOnlinePlayers()) {
             if(User.get(all.getUniqueId()).getChecked() == User.get(p.getUniqueId())) {
 
-                all.sendMessage(" ");
                 Variables.PLAYER_NOW_OFFLINE.forEach(var -> all.sendMessage(Core.prefix + var.replace("&", "§").replaceAll("%player%", p.getName())));
-                all.sendMessage(" ");
 
                 User.get(all.getUniqueId()).setChecked(null);
 
