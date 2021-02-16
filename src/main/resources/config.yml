@@ -9,7 +9,7 @@ AntiAC:
 
 
 # Clicks Settings
-  AllowedClicks: 40
+  AllowedClicks: 22
   # The number of clicks that are allowed
   # Could come to false positives if it is under 30
 
@@ -34,7 +34,7 @@ AntiAC:
 
 
 # Violation Settings
-  Just-Sanction-If-At-Violations: 20
+  Just-Sanction-If-At-Violations: -1
   # (!!) SET TO -1 IF YOU WANT TO HAVE THAT DISABLED (!!)
   # Just punishes the detected player if he has X violations or more
 
@@ -95,7 +95,7 @@ AntiAC:
   # Checks the ping of every player to prevent false detections because of ping
   # Stops the counting of the clicks while the player has a high ping
 
-  HighestAllowedPing: 200
+  HighestAllowedPing: 400
   # Set the highest allowed Ping
   # If the Ping is higher than X the PingProtection will be activated
 
@@ -118,7 +118,7 @@ AntiAC:
 
 
 # Log Settings
-  Log: false
+  Log: true
   # Store players who got detected in a file.
   # ATTENTION only recommended if sufficient memory space is available.
 
@@ -134,7 +134,7 @@ AntiAC:
   ConsoleNotification: true
   # Sends a notification to the server console when a player got detected
 
-  RestrictPlayer: true
+  RestrictPlayer: false
   # If a player got discovered for AutoClicker he can't build & place blocks and can't hit entities
   # Will just restrict the player when his clicks are too high or the average is too equal
 
@@ -149,7 +149,7 @@ AntiAC:
   FreezeAtClicks: 50
   # Freeze the player when he has reached this number of clicks. PlayerFreeze must be true
 
-  PlayerKill: true
+  PlayerKill: false
   # If a player got discovered for AutoClicker he gets killed
   # PlayerKill overwrites PlayerFreeze, RestrictPlayer
 
@@ -184,6 +184,6 @@ AntiAC:
   UnbanAfterHours: 1
   # Unban the player after UnbanAfterHours hours
 
-  ShoutOutPunishment: true
+  ShoutOutPunishment: false
   # If a player got discovered for AutoClicker he gets visually struck by a lightning and a message is sent to the chat.
   # Only works when PlayerKick, PlayerBan, PlayerFreeze, PlayerKill or RestrictPlayer is enabled.
