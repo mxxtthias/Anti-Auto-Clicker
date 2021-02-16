@@ -60,7 +60,7 @@ public class Timer implements Runnable {
                 message2 = "§b§l: §7[CPS: §b§l" + user.getChecked().getClicks()+ "§7] §7[Average: §b§l" + user.getChecked().getAverage() + "§7]";
             }
 
-            message2 = message2 + " §7[VL: §b" + user.getChecked().getViolations();
+            message2 = message2 + " §7[VL: §b" + user.getChecked().getViolations() + "§7]";
 
             if(Core.lowTPS) {
                 message2 = "§b§l: §e⚠ §c§lCannot be checked. Low TPS §e⚠";
